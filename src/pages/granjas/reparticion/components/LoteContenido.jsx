@@ -7,6 +7,7 @@ import { buildWeeklyConsumptionChart } from '../../lumbra/components/03.Detalles
 import { serieMortalidadAcumulada } from '../../lumbra/components/03.Detalles por lote/mortalidad-acumulada';
 import { agruparPeriodos } from '../../lumbra/components/03.Detalles por lote/periodos-detalle';
 import LoadingCircle from '../../lumbra/components/01.Datos_generales/00.LoadingCircle';
+import './lote-contenido.css';
 
 function Postura({ history, field, label, color }) {
   const data = useMemo(() => agruparPeriodos(history.filter((r) => /^POSTURA\s*-\s*PAVO$/.test(r.etapa))).map(({ rows, ...period }) => {
@@ -51,7 +52,7 @@ export default function LoteContenido({ linea, lote, mode = 'detalle' }) {
   if (!data.history.length) return <p className="panel muted">No hay datos de historial para este lote.</p>;
   return <>
     <p className="muted">Historial completo del lote y comparación con estándares de pavos por código, edad y sexo.</p>
-    <div className="lote-chart-stack" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 16 }}>
+    <div className="lote-chart-stack reparticion-lote-charts">
       <Postura history={data.history} field="prod_hinc" label="incubable" color="#16a34a" />
       <Mortalidad history={data.history} sexo="hembra" /><Mortalidad history={data.history} sexo="macho" />
       <Consumo {...data} sexo="hembra" /><Consumo {...data} sexo="macho" />
