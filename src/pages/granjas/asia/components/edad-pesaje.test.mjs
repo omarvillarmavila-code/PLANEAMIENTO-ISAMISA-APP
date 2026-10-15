@@ -1,0 +1,42 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { completedWeeks, withSampleAges } from './edad-pesaje.js';
+import { buildWeightDistributions, withDailyIdentity } from './distribucion-pesos.js';
+import { buildLotHistory } from './resumen-pesos.js';
+test('semanas completas: 11.1 pertenece a 11; fronteras y fechas inválidas', () => {
+  assert.equal(completedWeeks('2026-07-17', '2026-10-03'), 11);
+  assert.equal(completedWeeks('2026-07-17', '2026-07-17'), 0);
+  assert.equal(completedWeeks('2026-07-17', '2026-07-23'), 0);
+  assert.equal(completedWeeks('2026-07-17', '2026-07-24'), 1);
+  assert.equal(completedWeeks('17/07/26', '03/10/2026'), 11);
+  assert.equal(completedWeeks('2026-02-30', '2026-10-03'), null);
+  assert.equal(completedWeeks(null, '2026-10-03'), null);
+  assert.equal(completedWeeks('2026-10-04', '2026-10-03'), null);
+});
+test('fecha de ingreso por lote, sin reemplazarla por calendario o edad diaria', () => {
+  const input = [{ lote: '26RN09', fecha: '2026-10-03', peso_gr: 100, clase: 'A', peso_minimo_gr: 100, peso_maximo_gr: 100, semana_cal: 39, edad_semana: 12 }];
+  const weights = withSampleAges(input, [{ Cod_Lote: '26RN09', Fecha_Ing: '2026-07-17' }]);
+  assert.equal(weights[0].edad_pesaje_sem, 11);
+  const daily = [{ Cod_Lote: '26RN09', Fecha: '2026-10-03', Edad_sem: '12', ano: 2026, semana: 39, Sexo: 'MACHO', Variedad: 'NEGRO', Saldo_Ini: 100, Mortal: 0, Cons_Alim: 1 }];
+  assert.equal(withDailyIdentity(buildWeightDistributions(weights), daily, 2026, 39)[0].edad, 11);
+  const history = buildLotHistory('26RN09', '2026-10-03', weights, daily);
+  assert.equal(history.find((c) => c.sample).age, 11);
+  assert.equal(history.find((c) => c.sample).sampleExistence, null, 'No toma saldos de otra edad del registro diario');
+  assert.equal(history.find((c) => c.age === 11).hasDaily, false);
+  assert.equal(history.find((c) => c.age === 12).hasDaily, true);
+  assert.equal(history.find((c) => c.age === 12).consumption, 10);
+  assert.equal(history.find((c) => c.age === 12).foodKg, 1);
+  assert.equal(history.find((c) => c.age === 11).foodKg, null);
+  assert.equal(withSampleAges(input, [])[0].edad_pesaje_sem, null);
+  assert.equal(withSampleAges(input, [{ Cod_Lote: '26RN09', Fecha_Ing: '2026-07-17' }, { Cod_Lote: '26RN09', Fecha_Ing: '2026-07-18' }])[0].edad_pesaje_sem, null);
+});
+test('ingreso válido no se pierde por fila duplicada vacía; muestras sin edad siguen visibles', () => {
+  const input = [{ lote: '26RN09', fecha: '2026-10-03', peso_gr: 100 }, { lote: '26RN09', fecha: '2026-10-03', peso_gr: 200 }];
+  assert.equal(withSampleAges(input, [{ Cod_Lote: '26RN09', Fecha_Ing: '2026-07-17' }, { Cod_Lote: '26RN09', Fecha_Ing: null }])[0].edad_pesaje_sem, 11);
+  const unknown = withSampleAges(input, []);
+  const history = buildLotHistory('26RN09', '2026-10-03', unknown, []);
+  assert.equal(history.length, 1);
+  assert.equal(history[0].age, null);
+  assert.equal(history[0].sample.mean, 150);
+  assert.equal(history[0].sample.n, 2);
+});

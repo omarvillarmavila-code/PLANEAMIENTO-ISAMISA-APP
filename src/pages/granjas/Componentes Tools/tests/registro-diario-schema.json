@@ -1,0 +1,302 @@
+[
+  {
+    "column_name": "id",
+    "data_type": "bigint"
+  },
+  {
+    "column_name": "Periodo",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Fecha",
+    "data_type": "date"
+  },
+  {
+    "column_name": "Cod_Lote",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Especie",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Linea_Padre",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Linea_Madre",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Variedad",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Muda",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Sexo",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Unid_Prod",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Galpon",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Fecha_Ing",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Edad_ingreso",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Aves_Ing",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Mortal_Transporte",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Fecha_Cmb_Etap",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Aves_Cmb_Etap",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Etapa",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Etapa_Co",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Edad_dias",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Edad_sem",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Semana_Calendario",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Peso_Ave",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Mortal",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Mortal_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Mortal_Porc_Transf",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Mortal_Porc_Transf_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Desc_unid",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Desc_Kg",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Desc_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Descarte_Porc_Transf",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Descarte_Porc_Transf_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Venta_unid",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Venta_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Transf_Ing",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Transf_Acum_Ing",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Transf_Sal",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Transf_Acum_Sal",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Origen",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Destino",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Uniform",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Cons_Alim",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Tipo_Alim",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Cons_Alim_Ave",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Cons_Alim_Ave_Acu",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Prod_Huevo",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Porc_Prod_Huevo",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Prod_HInc",
+    "data_type": "numeric"
+  },
+  {
+    "column_name": "Prod_HMer",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Prod_HInc_Porc",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Prod_HCom",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Huevos_Inc_Kg",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Persistencia",
+    "data_type": "text"
+  },
+  {
+    "column_name": "HI_x_Gallina",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Peso_Ventas",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Peso_Beneficio",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Guia_Despacho_Aves",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Guia_Despacho_Huevos",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Saldo_Ini",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Saldo_Final",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Fecha_Liquidacion",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Estado_Lote",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Edad_Sem_Prd",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Consumo_Estandar",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Consumo_Acu_Estandar",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Peso_Estandar",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Postur_Estandar",
+    "data_type": "text"
+  },
+  {
+    "column_name": "HI_Estandar",
+    "data_type": "text"
+  },
+  {
+    "column_name": "HT_x_Gallina",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Costo_Alimento",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Costo_Alimento_Ave_Diario",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Costo_Alimento_Ave_Acum",
+    "data_type": "text"
+  },
+  {
+    "column_name": "Valido",
+    "data_type": "text"
+  },
+  {
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone"
+  }
+]

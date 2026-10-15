@@ -1,0 +1,3 @@
+import React from 'react'
+
+export default function Planning() { return <section className="page"><div className="page-heading"><div><span className="eyebrow">Operación</span><h2>Planeamiento</h2><p className="muted">Planifica y ajusta la operación por fecha, línea y unidad.</p></div><button className="primary-button small">＋ Nuevo plan</button></div><div className="panel empty-planning"><div className="empty-icon">✦</div><h3>Tu espacio de planeamiento</h3><p className="muted">Aquí construiremos el flujo para consultar proyecciones base, ajustar objetivos y comparar el avance real.</p><div className="planning-steps"><span><b>01</b> Seleccionar unidad</span><span><b>02</b> Definir periodo</span><span><b>03</b> Revisar proyección</span></div></div></section> }

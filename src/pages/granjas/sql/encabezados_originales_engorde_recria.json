@@ -1,0 +1,22 @@
+[
+  "Periodo ", "Fecha ", "Cod Lote", "Especie ", "Línea Padre", "Línea Madre",
+  "Variedad ", "Muda ", "Sexo ", "Unid Prod", "Galpon ", "Fecha Ing",
+  "Edad ingreso", "Aves Ing (unid)", "N° Mortal Tr ansp. (unid)",
+  "Fecha Cmb. Etap", "Aves Cmb. Etap(unid)", "Etapa ", "Etapa Co ",
+  "Edad (días)", "Edad (sem)", "Semana Calendario", "Peso Ave (g)",
+  "Mortal (unid)", "Mortal Acum(unid)", "Mortal. (%) Transf",
+  "Mortal. (%) Transf Acum", "Desc (unid)", "Desc (Kg)", "Desc Ac um(unid)",
+  "Descarte (%) Transf", "Descarte (%) Transf Acum", "Venta (unid)",
+  "Venta Ac um(unid)", "Transf Ing.(unid)", "Transf. Acum Ing.(unid)",
+  "Transf. Sal(unid)", "Transf Acum Sal(unid)", "Origen ", "Destino ",
+  "Uniform (%)", "Cons Alim(Kg)", "Tipo Alim", "Cons Alim Ave (g/ave/d)",
+  "Cons Alim Ave Acu (g/ave)", "Prod Hue vo(unid)", "% Prod Huevo",
+  "Prod HInc (unid)", "Prod HMer (und)", "Prod HInc (%)", "Prod HCom (unid)",
+  "Huevos Inc.(Kg)", "Persisten cia (sem)", "HI x Gallina Encaset(unid)",
+  "Peso Ven tas (Kg)", "Peso Ben eficio (Kg)", "Guía de Despacho Aves",
+  "Guía de Despacho Huevos", "Saldo Ini (unid)", "Saldo Final (unid)",
+  "Fecha Liquidacion", "Estado Lote", "Edad Sem Prd", "Consumo Estandar",
+  "Consumo Acu Estandar", "Peso Estandar", "% Postur Estandar", "% HI Estandar",
+  "HT x Gallina Encaset (und)", "Costo Alimento", "Costo Alimento Por Ave Diario",
+  "Costo Alimento Por Ave Acum.", "Val ido", "Còdigo de Registro"
+]

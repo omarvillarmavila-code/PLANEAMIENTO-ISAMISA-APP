@@ -1,0 +1,31 @@
+.resumen-lotes { min-width: 0; width: 100%; max-width: 100%; }
+.resumen-lotes-toolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+.resumen-lotes-toolbar h3 { margin: 0 auto 0 0; align-self: center; }
+.resumen-lotes label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; min-width: 0; }
+.resumen-lotes input, .resumen-lotes select, .resumen-lotes textarea { border: 1px solid #cbd5e1; border-radius: 6px; background: white; color: #0f172a; padding: 9px; font: inherit; min-width: 0; }
+.resumen-lotes select { min-width: 190px; max-width: 100%; }
+.resumen-lotes textarea { min-height: 72px; resize: vertical; }
+.resumen-lotes fieldset { border: 1px solid #cbd5e1; border-radius: 8px; margin: 14px 0; padding: 16px; min-width: 0; }
+.resumen-lotes legend { font-weight: 600; padding: 0 6px; }
+.resumen-lotes-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.resumen-lotes-scroll { width: 100%; max-width: 100%; overflow: auto; max-height: 620px; border: 1px solid #e2e8f0; border-radius: 8px; }
+.resumen-lotes table { table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: 11px; line-height: 1.4; width: 100%; min-width: 0; }
+.resumen-lotes th, .resumen-lotes td { padding: 8px 3px; text-align: left; vertical-align: middle; border-bottom: 1px solid #e2e8f0; min-width: 0; white-space: normal; overflow-wrap: anywhere; background: white; }
+.resumen-lotes th { position: sticky; top: 0; z-index: 2; background: #f1f5f9; }
+.resumen-lotes-sort { width: 100%; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 600; text-align: inherit; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+.resumen-lotes-sort:hover { color: #1d4ed8; }
+.resumen-lotes-sort:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; border-radius: 2px; }
+.resumen-lotes th:last-child, .resumen-lotes td:last-child { width: 48px; text-align: center; }
+.resumen-lotes-actions { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.resumen-lotes .resumen-lotes-icon-button { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; flex-shrink: 0; }
+.resumen-lotes .resumen-lotes-edit { background: #2563eb; border-color: #2563eb; color: #fff; }
+.resumen-lotes .resumen-lotes-edit:hover:not(:disabled) { background: #1d4ed8; border-color: #1d4ed8; }
+.resumen-lotes .resumen-lotes-delete { background: #dc2626; border-color: #dc2626; color: #fff; }
+.resumen-lotes .resumen-lotes-delete:hover:not(:disabled) { background: #b91c1c; border-color: #b91c1c; }
+.resumen-lotes .resumen-lotes-icon-button:focus-visible { outline: 2px solid #0f172a; outline-offset: 3px; }
+.resumen-lotes-pagination { justify-content: flex-end; align-items: center; }
+.resumen-lotes-confirm { background: #fff7ed; padding: 16px; border: 1px solid #fed7aa; border-radius: 8px; margin: 16px 0; }
+.resumen-lotes [role="alert"], .resumen-lotes-error { color: #9f1239; }
+.resumen-lotes [aria-invalid="true"] { border-color: #be123c; }
+.resumen-lotes button:disabled { opacity: .5; cursor: not-allowed; }
+@media (max-width: 600px) { .resumen-lotes-fields { grid-template-columns: 1fr; } .resumen-lotes td:last-child, .resumen-lotes th:last-child { position: static; } }

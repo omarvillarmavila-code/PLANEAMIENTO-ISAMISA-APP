@@ -1,0 +1,49 @@
+.csv-granja-section-title{margin:0 0 14px;font-size:18px;font-weight:700;line-height:1.4;color:#003462}
+.csv-granja-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start;margin-bottom:18px;min-width:0}
+.csv-granja.panel{width:100%;box-sizing:border-box;container-type:inline-size;margin-bottom:0;min-width:0;padding:16px 18px;color:#173042;border:1px solid #dce5ed;border-radius:12px;box-shadow:0 2px 8px #17304205}
+.csv-granja-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.csv-granja h3,.csv-granja h4{display:flex;align-items:center;gap:7px;margin:0 0 4px}
+.csv-granja h3{font-size:15px;font-weight:700;color:#003462}
+.csv-granja h4{font-size:13px}
+.csv-granja p{font-size:12px;line-height:1.5;margin:4px 0 8px}
+.csv-granja-heading>div>p{margin-bottom:0;color:#637586}
+.csv-granja button{display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font:inherit;font-size:12px}
+.csv-granja .primary-button,.csv-granja .secondary-button{min-height:34px;padding:7px 12px;border-radius:7px;font-weight:600;white-space:nowrap}
+.csv-granja .secondary-button{background:#fff;border:1px solid #cedbe5;color:#244b68}
+.csv-granja .secondary-button:hover:not(:disabled){background:#f0f6fb;border-color:#8aaac3}
+.csv-granja button:disabled{opacity:.5;cursor:not-allowed}
+.csv-granja button:focus-visible,.csv-granja input:focus-visible{outline:3px solid #79b9e9;outline-offset:3px}
+.csv-granja .primary-button{background:#003462;border:1px solid #003462;color:#fff}
+.csv-granja .primary-button:hover:not(:disabled){background:#064c83;border-color:#064c83}
+/* La marca global fija el fondo de primary-button con !important. */
+.csv-granja .primary-button.csv-granja-validate-ready,.csv-granja .primary-button.csv-granja-import-button{background:#15803d!important;border-color:#15803d}
+.csv-granja .primary-button.csv-granja-validate-ready:hover:not(:disabled),.csv-granja .primary-button.csv-granja-import-button:hover:not(:disabled){background:#166534!important;border-color:#166534}
+.csv-granja-file{margin-top:14px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;min-height:96px;padding:16px;background:#f5f9fd;border:1px dashed #86a5be;border-radius:9px;text-align:left;transition:background-color .15s,border-color .15s,box-shadow .15s}
+.csv-granja-file>svg{box-sizing:content-box;padding:10px;border-radius:10px;background:#e5eff8;color:#003462}
+.csv-granja-file-dragging{background:#e6f1fa;border-color:#003462;box-shadow:inset 0 0 0 1px #003462}
+.csv-granja-file-busy{opacity:.6}
+.csv-granja-file-choice{display:flex;flex-direction:column;gap:5px;min-width:0}
+.csv-granja-file-choice>strong{font-size:14px;color:#003462}
+.csv-granja-file-choice>span{font-size:11px;line-height:1.5;color:#637586;overflow-wrap:anywhere}
+.csv-granja-actions{display:flex;align-items:center;gap:12px;margin:12px 0 0;flex-wrap:wrap}
+.csv-granja .csv-granja-notice{margin:10px 0;padding:10px 12px;border:1px solid #eddbb5;background:#fffbf2;border-radius:7px;overflow-wrap:anywhere}
+.csv-granja-notice p:last-child{margin-bottom:0}
+.csv-granja-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
+.csv-granja-summary>div{padding:10px 12px;background:#f5f8fb;border:1px solid #e5ecf2;border-radius:7px}
+.csv-granja-summary span{display:block;font-size:11px;color:#637586}
+.csv-granja-summary strong{display:block;font-size:20px;margin-top:4px;font-variant-numeric:tabular-nums}
+.csv-granja-summary strong.csv-granja-period{font-size:12px;line-height:1.5}
+.csv-granja-validation{margin-top:16px}
+.csv-granja-scroll{overflow:auto;max-height:310px;border:1px solid #dbe3ea;border-radius:7px}
+.csv-granja table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+.csv-granja th{background:#f2f6f9;position:sticky;top:0;z-index:1;white-space:nowrap}
+.csv-granja th,.csv-granja td{padding:7px 10px;border-bottom:1px solid #e7edf1;max-width:400px;overflow-wrap:anywhere}
+.csv-granja tbody tr:hover{background:#f8fbfe}
+.csv-granja-progress{margin-top:14px}
+.csv-granja-progress progress{width:100%;height:10px;accent-color:#003462}
+.csv-granja-success{display:flex;gap:10px;align-items:center;padding:12px;margin-top:14px;background:#edf8f1;border:1px solid #acd7b9;border-radius:8px;color:#22663b}
+.csv-granja-success p{margin-bottom:0}
+@media(max-width:1024px){.csv-granja-layout{grid-template-columns:minmax(0,1fr)}}
+@container(max-width:520px){.csv-granja-file{grid-template-columns:auto minmax(0,1fr)}.csv-granja-file>.secondary-button{grid-column:2;justify-self:start}.csv-granja-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.csv-granja-file{grid-template-columns:auto minmax(0,1fr)}.csv-granja-file>.secondary-button{grid-column:2;justify-self:start}.csv-granja-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.csv-granja.panel{padding:14px}.csv-granja-file{padding:12px;gap:10px}.csv-granja-file-choice>strong{font-size:13px}.csv-granja .primary-button,.csv-granja .secondary-button{min-height:40px}.csv-granja-actions{align-items:flex-start}}
