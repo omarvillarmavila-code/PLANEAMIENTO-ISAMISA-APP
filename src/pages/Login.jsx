@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
+import "./login.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -9,6 +11,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   async function handleSubmit(e) {
     e.preventDefault();
     setBusy(true);
@@ -24,57 +27,35 @@ export default function Login() {
     setBusy(false);
   }
   return (
-    <div className="login-page">
-      <div className="login-art">
-        <div className="login-brand">
-          <div className="brand-mark">P</div>
-          <strong>Planeamiento</strong>
-        </div>
-        <div className="art-copy">
-          <span className="eyebrow light">Gestión inteligente</span>
-          <h1>PRoducción Pecuaria e Industrial</h1>
-          <p>
-            Una vista integrada de granjas, incubadoras y planes operativos.
-          </p>
-        </div>
-        <div className="art-footer">© 2026 · Plataforma de operaciones</div>
-      </div>
-      <div className="login-panel">
-        <div className="login-box">
-          <span className="eyebrow">Bienvenido de nuevo</span>
-          <h2>Ingresa a tu cuenta</h2>
-          <p className="muted">Accede al centro de planeamiento.</p>
-          <form onSubmit={handleSubmit}>
-            <label>
-              Correo electrónico
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="nombre@empresa.com"
-              />
-            </label>
-            <label>
-              Contraseña
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-              />
-            </label>
-            {error && <div className="form-error">{error}</div>}
-            <button className="primary-button" disabled={busy}>
-              {busy ? "Ingresando…" : "Ingresar"}
+    <main className="login-page login-simple">
+      <section className="login-box" aria-labelledby="login-title">
+        <div className="login-logo" aria-label="ISAMISA">ISAMISA</div>
+        <h2 id="login-title">Iniciar sesión</h2>
+        <p className="login-subtitle">Planeamiento y producción</p>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="login-email">Correo electrónico</label>
+          <input id="login-email" name="email" type="email" autoComplete="username"
+            required value={email} onChange={(e) => setEmail(e.target.value)}
+            placeholder="nombre@empresa.com" />
+          <label htmlFor="login-password">Contraseña</label>
+          <div className="login-password">
+            <input id="login-password" name="password" type={showPassword ? "text" : "password"}
+              autoComplete="current-password" required value={password}
+              onChange={(e) => setPassword(e.target.value)} placeholder="Tu contraseña" />
+            <button type="button" className="login-password-toggle"
+              aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+              aria-pressed={showPassword} aria-controls="login-password"
+              title={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+              onClick={() => setShowPassword((visible) => !visible)}>
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
-          </form>
-          <p className="login-note">
-            El acceso y los permisos se gestionan desde Supabase Auth.
-          </p>
-        </div>
-      </div>
-    </div>
+          </div>
+          {error && <div className="form-error" role="alert">{error}</div>}
+          <button type="submit" className="primary-button" disabled={busy}>
+            {busy ? "Ingresando…" : "Ingresar"}
+          </button>
+        </form>
+      </section>
+    </main>
   );
 }

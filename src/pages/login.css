@@ -1,0 +1,18 @@
+.login-page.login-simple{min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:1fr;place-items:center;padding:32px 20px;background:#f4f6f8}
+.login-simple .login-box{width:100%;max-width:390px;padding:36px 30px;border:1px solid #e0e6eb;border-radius:16px;background:#fff;box-shadow:0 12px 40px #00346208}
+.login-simple .login-logo{text-align:center;color:#003462;font-size:34px;font-weight:800;letter-spacing:2px;margin-bottom:26px}
+.login-simple .login-box h2{text-align:center;font-family:inherit;font-size:21px;font-weight:600;margin:0;text-transform:none;letter-spacing:0}
+.login-simple .login-subtitle{text-align:center;color:#64748b;font-size:13px;margin:8px 0 0}
+.login-simple .login-box form{margin-top:28px}
+.login-simple .login-box label{margin:18px 0 7px;color:#334155;font-size:13px;font-weight:500}
+.login-simple .login-box input{margin:0;min-height:46px;border:1px solid #cbd5e1;border-radius:8px;padding:11px 12px;font-size:14px;outline:none}
+.login-simple .login-box input:focus{border-color:#003462;box-shadow:0 0 0 3px #00346214}
+.login-simple .login-password{position:relative;margin-bottom:20px}
+.login-simple .login-password input{padding-right:48px}
+.login-simple .login-password input::-ms-reveal{display:none}
+.login-simple .login-password-toggle{position:absolute;right:3px;top:3px;width:40px;height:40px;display:grid;place-items:center;background:transparent;border:0;border-radius:6px;color:#64748b;cursor:pointer}
+.login-simple .login-password-toggle:hover{background:#f1f5f9;color:#003462}
+.login-simple .login-password-toggle:focus-visible{outline:2px solid #003462;outline-offset:1px}
+.login-simple .login-box .primary-button{min-height:46px;background:#003462;color:white;border-radius:8px;font-size:14px;cursor:pointer}
+.login-simple .primary-button:disabled{opacity:.65;cursor:wait}
+@media(max-width:420px){.login-simple .login-box{padding:30px 22px}}
